@@ -1,9 +1,9 @@
 eureka:
   client:
-    serviceUrl: #注册中心的注册地址
+    serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka/
 server:
-  port: 2020  #服务端口号
+  port: 2020
 spring:
   application:
-    name: IMCP-BCMS #服务名称--调用的时候根据名称来调用该服务的方法
+    name: IMCP-BCMS

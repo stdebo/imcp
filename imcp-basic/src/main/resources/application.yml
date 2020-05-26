@@ -1,9 +1,30 @@
 eureka:
   client:
-    serviceUrl: #×¢²áÖĞĞÄµÄ×¢²áµØÖ·
+    serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka/
 server:
-  port: 2010  #·şÎñ¶Ë¿ÚºÅ
+  port: 2010
 spring:
   application:
-    name: IMCP-BASIC #·şÎñÃû³Æ--µ÷ÓÃµÄÊ±ºò¸ù¾İÃû³ÆÀ´µ÷ÓÃ¸Ã·şÎñµÄ·½·¨
+    name: IMCP-BASIC
+
+spring:
+  # é…ç½®æ–‡ä»¶é€‰æ‹©(devï¼Œpro)
+  profiles:
+   ã€€active: dev
+
+  # å›½é™…åŒ–ï¼ˆæ¶ˆæ¯æºè‡ªåŠ¨é…ç½®,springbooté»˜è®¤æ‰¾å‡ºmessagesï¼‰
+  messages:
+     basename: i18n.messages
+  datasource:
+  ã€€ã€€driver-class-name: com.mysql.jdbc.Driver
+  ã€€ã€€url: jdbc:mysql://127.0.0.1:3306/imcp_basic?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+ ã€€ã€€ username: root
+  ã€€ã€€password: root
+  ã€€ã€€type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  #  mapperæ–‡ä»¶
+  mapper-locations: mapper/*/*Mapper.xml
+  #  å®ä½“ç±»
+  type-aliases-package: com.imcp.basic.bean
