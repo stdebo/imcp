@@ -1,9 +1,20 @@
 eureka:
-  client:
-    serviceUrl: #注册中心的注册地址
-      defaultZone: http://127.0.0.1:8761/eureka/
+    client:
+        serviceUrl:
+            defaultZone: http://127.0.0.1:8761/eureka/
+logging:
+    config: classpath:logback-spring.xml
+mybatis:
+    mapper-locations: mapper/*/*Mapper.xml
+    type-aliases-package: com.imcp.output.bean
 server:
-  port: 2040  #服务端口号
+    port: 2040
 spring:
-  application:
-    name: IMCP-OUTPUT #服务名称--调用的时候根据名称来调用该服务的方法
+    application:
+        datasource:
+            driverClassName: com.mysql.jdbc.Driver
+            password: root
+            type: com.alibaba.druid.pool.DruidDataSource
+            url: jdbc:mysql://localhost:3306/imcp_output?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+            username: root
+        name: IMCP-OUTPUT

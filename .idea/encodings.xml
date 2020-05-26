@@ -8,6 +8,7 @@
     <file url="file://$PROJECT_DIR$/imcp-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/imcp-objects" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/imcp-output" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/imcp-output/src/main/resources/application.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/imcp-system" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/imcp-workflow" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

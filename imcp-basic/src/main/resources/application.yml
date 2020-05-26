@@ -1,30 +1,20 @@
 eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka/
-server:
-  port: 2010
-spring:
-  application:
-    name: IMCP-BASIC
-
-spring:
-  # 配置文件选择(dev，pro)
-  profiles:
-   　active: dev
-
-  # 国际化（消息源自动配置,springboot默认找出messages）
-  messages:
-     basename: i18n.messages
-  datasource:
-  　　driver-class-name: com.mysql.jdbc.Driver
-  　　url: jdbc:mysql://127.0.0.1:3306/imcp_basic?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
- 　　 username: root
-  　　password: root
-  　　type: com.alibaba.druid.pool.DruidDataSource
-
+    client:
+        serviceUrl:
+            defaultZone: http://127.0.0.1:8761/eureka/
+logging:
+    config: classpath:logback-spring.xml
 mybatis:
-  #  mapper文件
-  mapper-locations: mapper/*/*Mapper.xml
-  #  实体类
-  type-aliases-package: com.imcp.basic.bean
+    mapper-locations: mapper/*/*Mapper.xml
+    type-aliases-package: com.imcp.basic.bean
+server:
+    port: 2010
+spring:
+    application:
+        name: IMCP-BASIC
+    datasource:
+        driverClassName: com.mysql.jdbc.Driver
+        password: root
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://localhost:3306/imcp_basic?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+        username: root

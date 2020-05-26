@@ -2,11 +2,9 @@ package com.imcp.basic.service;
 
 import com.imcp.basic.bean.User;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Transactional
 public interface UserService {
     //查找所有的用户
     List<User> getAllUser();
