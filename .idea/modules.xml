@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/imcp.iml" filepath="$PROJECT_DIR$/imcp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imcp-basic/imcp-basic.iml" filepath="$PROJECT_DIR$/imcp-basic/imcp-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imcp-bcms/imcp-bcms.iml" filepath="$PROJECT_DIR$/imcp-bcms/imcp-bcms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imcp-eureka/imcp-eureka.iml" filepath="$PROJECT_DIR$/imcp-eureka/imcp-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imcp-objects/imcp-objects.iml" filepath="$PROJECT_DIR$/imcp-objects/imcp-objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imcp-output/imcp-output.iml" filepath="$PROJECT_DIR$/imcp-output/imcp-output.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imcp-system/imcp-system.iml" filepath="$PROJECT_DIR$/imcp-system/imcp-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imcp-workflow/imcp-workflow.iml" filepath="$PROJECT_DIR$/imcp-workflow/imcp-workflow.iml" />
+    </modules>
+  </component>
+</project>
