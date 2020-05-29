@@ -10,7 +10,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-@MapperScan("com.imcp.basic.*.mapper")
+@MapperScan("com.imcp.basic.mapper")
 public class BasicApplication {
 
     private static final Logger logger = LoggerFactory.getLogger(BasicApplication.class);

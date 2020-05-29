@@ -10,14 +10,14 @@ public interface UserService {
     List<User> getAllUser();
 
     //添加用户
-    void addUser(User user);
+    int addUser(User user);
 
     //根据用户名、密码查找用户
-    User getUser(@Param("username") String username, @Param("password") String password);
+    User getUser(@Param("userName") String userName, @Param("passWord") String passWord);
 
-    void delete(String guid);
+    int delete(String guid);
 
     User getUserByGuid(String guid);
 
-    void edit(User user);
+    int edit(User user);
 }
