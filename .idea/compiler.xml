@@ -6,23 +6,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="imcp" />
+        <module name="imcp-api" />
         <module name="imcp-basic" />
         <module name="imcp-bcms" />
+        <module name="imcp-consumer" />
         <module name="imcp-eureka" />
         <module name="imcp-objects" />
         <module name="imcp-output" />
+        <module name="imcp-security" />
         <module name="imcp-system" />
         <module name="imcp-workflow" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="imcp" target="1.8" />
+      <module name="imcp-api" target="1.8" />
       <module name="imcp-basic" target="1.8" />
       <module name="imcp-bcms" target="1.8" />
+      <module name="imcp-consumer" target="1.8" />
       <module name="imcp-eureka" target="1.8" />
       <module name="imcp-objects" target="1.8" />
       <module name="imcp-output" target="1.8" />
+      <module name="imcp-security" target="1.8" />
       <module name="imcp-system" target="1.8" />
       <module name="imcp-workflow" target="1.8" />
     </bytecodeTargetLevel>

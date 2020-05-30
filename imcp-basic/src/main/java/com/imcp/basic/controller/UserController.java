@@ -1,7 +1,6 @@
 package com.imcp.basic.controller;
 
 import com.imcp.basic.bean.User;
-import com.imcp.basic.service.UserRelationService;
 import com.imcp.basic.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 
 @Api(description = "用户操作接口")
 @RestController

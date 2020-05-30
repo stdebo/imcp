@@ -11,6 +11,9 @@
         <option value="$PROJECT_DIR$/imcp-workflow/pom.xml" />
         <option value="$PROJECT_DIR$/imcp-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/imcp-bcms/pom.xml" />
+        <option value="$PROJECT_DIR$/imcp-security/pom.xml" />
+        <option value="$PROJECT_DIR$/imcp-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/imcp-api/pom.xml" />
       </list>
     </option>
   </component>
