@@ -1,7 +1,8 @@
-package com.imcp.basic.service;
+package com.imcp.basic.service.impl;
 
 import com.imcp.basic.bean.User;
 import com.imcp.basic.mapper.UserMapper;
+import com.imcp.basic.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -10,17 +11,17 @@ import java.util.List;
 
 @Component
 public class UserServiceImpl implements UserService {
-    @Autowired
+    @Resource
     private UserMapper userMapper;
 
     @Override
     public List<User> getAllUser() {
-        return userMapper.getAllUser();
+        return userMapper.selectAll();
     }
 
     @Override
     public int addUser(User user) {
-        return userMapper.addUser(user);
+        return userMapper.insert(user);
     }
 
     @Override
@@ -29,17 +30,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public int delete(String guid) {
-        return userMapper.delUser(guid);
+    public int delete(String id) {
+        return userMapper.deleteByPrimaryKey(id);
     }
 
     @Override
     public User getUserByGuid(String guid) {
-        return userMapper.getUserByGuid(guid);
+        return userMapper.selectByPrimaryKey(guid);
     }
 
     @Override
     public int edit(User user) {
-        return userMapper.updateUser(user);
+        return userMapper.updateByPrimaryKey(user);
     }
 }
