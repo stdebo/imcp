@@ -21,21 +21,21 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-//    @ApiOperation(value = "获取用户", notes="通过GUID获取用户信息")
-//    @ApiImplicitParam(name = "guid", value = "用户GUID", paramType = "query", required = true, dataType = "String")
-//    @RequestMapping("/getUser")
-//    public User getUser(@RequestParam("id") String id) {
-//        System.out.println(userService.getUserByGuid(id));
-//        return userService.getUserByGuid(id);
-//
-//    }
-//
-//    @ApiOperation(value = "获取用户", notes="通过GUID获取用户信息")
-//    @ApiImplicitParam(name = "guid", value = "用户GUID", paramType = "query", required = true, dataType = "String")
-//    @RequestMapping("/getUser/{id}")
-//    public User getUser2(@PathVariable String id) {
-//        return userService.getUserByGuid(id);
-//    }
+    @ApiOperation(value = "获取用户", notes="通过GUID获取用户信息")
+    @ApiImplicitParam(name = "guid", value = "用户GUID", paramType = "query", required = true, dataType = "String")
+    @RequestMapping("/getUser")
+    public User getUser(@RequestParam("id") String id) {
+        System.out.println(userService.getUserByGuid(id));
+        return userService.getUserByGuid(id);
+
+    }
+
+    @ApiOperation(value = "获取用户", notes="通过GUID获取用户信息")
+    @ApiImplicitParam(name = "guid", value = "用户GUID", paramType = "query", required = true, dataType = "String")
+    @RequestMapping("/getUser/{id}")
+    public User getUser2(@PathVariable String id) {
+        return userService.getUserByGuid(id);
+    }
 
     @ApiOperation(value = "删除用户", notes="通过ID删除用户信息")
     @ApiImplicitParam(name = "id", value = "用户ID", paramType = "query", required = true, dataType = "String")
