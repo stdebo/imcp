@@ -14,28 +14,27 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerApp {
 
-
     // 访问地址 ：http://localhost:2010/swagger-ui.html 端口根据配置文件
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
+                .apiInfo(apiInfo())//调用apiInfo方法,创建一个ApiInfo实例,里面是展示在文档页面信息内容
                 .select()
-                //为当前包路径
-                .apis(RequestHandlerSelectors.basePackage("com.imcp.basic.config"))
+                //控制暴露出去的路径下的实例
+                //如果某个接口不想暴露,可以使用以下注解
+                //@ApiIgnore 这样,该接口就不会暴露在 swagger2 的页面下
+                .apis(RequestHandlerSelectors.basePackage("com.imcp.basic.controller"))
                 .paths(PathSelectors.any())
                 .build();
-//        return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class)).build();
     }
-
-    //构建 api文档的详细信息函数,注意这里的注解引用的是哪个
+    //构建 api文档的详细信息函数
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
-                .title("Spring Boot 使用 Swagger2 构建RESTful API")
-                //创建人
-                //.contact(new Contact("STDEBO", "https://github.com/stdebo/imcp", ""))
-                //版本号
+                .title("Spring Boot Swagger2 构建RESTful API")
+                //条款地址
+                .termsOfServiceUrl("https://github.com/stdebo/imcp")
+                .contact("STDEBO")
                 .version("1.0")
                 //描述
                 .description("API 描述")
