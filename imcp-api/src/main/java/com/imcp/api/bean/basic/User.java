@@ -1,4 +1,4 @@
-package com.imcp.api.bean;
+package com.imcp.api.bean.basic;
 
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;

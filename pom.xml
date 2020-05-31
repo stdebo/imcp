@@ -32,6 +32,7 @@
         <module>imcp-security</module>
         <module>imcp-consumer</module>
         <module>imcp-api</module>
+        <module>imcp-geteway</module>
     </modules>
 
     <dependencies>

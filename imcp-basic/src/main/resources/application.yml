@@ -8,14 +8,11 @@ eureka:
 logging:
     config: classpath:logback-spring.xml
 mybatis:
-    mapper-locations: classpath:mapper/*.xml
-    #实体类所在包名
-    type-aliases-package: com.imcp.basic.bean
-    #通用mapper配置
     mapper:
-        #公用接口类路径
-        mappers: com.imcp.basic.mapper
         identity: MYSQL
+        mappers: com.imcp.basic.mapper
+    mapper-locations: classpath:mapper/*.xml
+    type-aliases-package: com.imcp.basic.bean
 server:
     port: 2010
 spring:
@@ -23,7 +20,15 @@ spring:
         name: IMCP-BASIC
     datasource:
         driverClassName: com.mysql.jdbc.Driver
-        password: 123456
+        password: root
         type: com.alibaba.druid.pool.DruidDataSource
         url: jdbc:mysql://localhost:3306/imcp_basic?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
         username: root
+#    security:
+#      basic:
+#        enabled: true # 启用SpringSecurity的安全配置项
+#      user:
+#        name: imcp  # 认证用户名
+#        password: 123456 # 认证密码
+#        role:        # 授权角色
+#        - USER

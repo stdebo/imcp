@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/imcp-security/pom.xml" />
         <option value="$PROJECT_DIR$/imcp-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/imcp-api/pom.xml" />
+        <option value="$PROJECT_DIR$/imcp-geteway/pom.xml" />
       </list>
     </option>
   </component>
