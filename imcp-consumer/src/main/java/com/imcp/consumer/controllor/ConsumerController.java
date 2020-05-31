@@ -1,6 +1,5 @@
 package com.imcp.consumer.controllor;
 
-import com.imcp.api.bean.basic.Dept;
 import com.imcp.api.bean.basic.User;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.http.HttpEntity;
@@ -13,20 +12,30 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 @RestController
 public class ConsumerController {
 
-    public static final String USER_GET_URL = "http://127.0.0.1:2010/user/getUser/";
+    public static final String USER_GET_URL = "http://IMCP-BASIC/user/getUser/";
 
     @Resource
     private RestTemplate restTemplate;
     @Resource
     private HttpHeaders headers;
 
+    @Resource
+    private LoadBalancerClient loadBalancerClient ;
+
     @RequestMapping(value = "/consumer/user/getUser/{id}")
     public Object getDept(@PathVariable String id) {
+
+        ServiceInstance serviceInstance = this.loadBalancerClient.choose("IMCP-BASIC") ;
+
+        System.out.println(
+                "【*** ServiceInstance ***】host = " + serviceInstance.getHost()
+                        + "、port = " + serviceInstance.getPort()
+                        + "、serviceId = " + serviceInstance.getServiceId());
+
         User user = this.restTemplate
                 .exchange(USER_GET_URL + id, HttpMethod.GET,
                         new HttpEntity<Object>(this.headers), User.class)

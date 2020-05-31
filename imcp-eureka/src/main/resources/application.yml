@@ -1,10 +1,19 @@
-server:
-  port: 8761 #服务注册中心端口号
+#建议配置域名映射
+#C:\Windows\System32\drivers\etc\host 配置内容
+#127.0.0.1       imcp-eureka-8761.com
+#127.0.0.1       imcp-eureka-8762.com
+#127.0.0.1       imcp-eureka-8763.com
 eureka:
-  instance:
-    hostname: 127.0.0.1 #服务注册中心IP地址
-  client:
-    registerWithEureka: false #是否向服务注册中心注册自己
-    fetchRegistry: false #是否检索服务
-    serviceUrl: #服务注册中心的配置内容，指定服务注册中心的位置
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    client:
+        fetch-registry: true # 当然这个默认就是true，表示向eureka注册自己
+        register-with-eureka: true # 这个的意思是从eureka server拉取注册表，集群中从相邻的eureka server拉取注册表
+        prefer-ip-address: true     # 访问的路径变为IP地址
+        service-url:
+            defaultZone: http://imcp-eureka-8762.com:8762/eureka,http://imcp-eureka-8763.com:8763/eureka
+    instance:
+        hostname: imcp-eureka-8761.com
+server:
+    port: 8761
+spring:
+    application:
+        name: imcp-eureka

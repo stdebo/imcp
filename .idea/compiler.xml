@@ -8,9 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="imcp-api" />
         <module name="imcp-basic" />
+        <module name="imcp-basic-2011" />
+        <module name="imcp-basic-2012" />
         <module name="imcp-bcms" />
         <module name="imcp-consumer" />
         <module name="imcp-eureka" />
+        <module name="imcp-eureka (1)" />
+        <module name="imcp-eureka (2)" />
+        <module name="imcp-eureka-8762" />
+        <module name="imcp-eureka-8763" />
         <module name="imcp-geteway" />
         <module name="imcp-objects" />
         <module name="imcp-output" />
@@ -23,9 +29,15 @@
       <module name="imcp" target="1.8" />
       <module name="imcp-api" target="1.8" />
       <module name="imcp-basic" target="1.8" />
+      <module name="imcp-basic-2011" target="1.8" />
+      <module name="imcp-basic-2012" target="1.8" />
       <module name="imcp-bcms" target="1.8" />
       <module name="imcp-consumer" target="1.8" />
       <module name="imcp-eureka" target="1.8" />
+      <module name="imcp-eureka (1)" target="1.8" />
+      <module name="imcp-eureka (2)" target="1.8" />
+      <module name="imcp-eureka-8762" target="1.8" />
+      <module name="imcp-eureka-8763" target="1.8" />
       <module name="imcp-geteway" target="1.8" />
       <module name="imcp-objects" target="1.8" />
       <module name="imcp-output" target="1.8" />

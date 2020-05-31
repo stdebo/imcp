@@ -4,10 +4,15 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/imcp-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/imcp-basic" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/imcp-basic-2011" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/imcp-basic-2012" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/imcp-bcms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/imcp-bcms/src/main/resources/application.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/imcp-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/imcp-consumer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/imcp-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/imcp-eureka-8762" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/imcp-eureka-8763" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/imcp-geteway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/imcp-objects" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/imcp-output" charset="UTF-8" />

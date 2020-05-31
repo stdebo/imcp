@@ -25,10 +25,14 @@
         <module>imcp-workflow</module>
         <module>imcp-objects</module>
         <module>imcp-basic</module>
+        <module>imcp-basic-2011</module>
+        <module>imcp-basic-2012</module>
         <module>imcp-bcms</module>
         <module>imcp-output</module>
         <module>imcp-system</module>
         <module>imcp-eureka</module>
+        <module>imcp-eureka-8762</module>
+        <module>imcp-eureka-8763</module>
         <module>imcp-security</module>
         <module>imcp-consumer</module>
         <module>imcp-api</module>

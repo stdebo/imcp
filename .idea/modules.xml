@@ -5,9 +5,15 @@
       <module fileurl="file://$PROJECT_DIR$/imcp.iml" filepath="$PROJECT_DIR$/imcp.iml" />
       <module fileurl="file://$PROJECT_DIR$/imcp-api/imcp-api.iml" filepath="$PROJECT_DIR$/imcp-api/imcp-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/imcp-basic/imcp-basic.iml" filepath="$PROJECT_DIR$/imcp-basic/imcp-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imcp-basic-2011/imcp-basic-2011.iml" filepath="$PROJECT_DIR$/imcp-basic-2011/imcp-basic-2011.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imcp-basic-2012/imcp-basic-2012.iml" filepath="$PROJECT_DIR$/imcp-basic-2012/imcp-basic-2012.iml" />
       <module fileurl="file://$PROJECT_DIR$/imcp-bcms/imcp-bcms.iml" filepath="$PROJECT_DIR$/imcp-bcms/imcp-bcms.iml" />
       <module fileurl="file://$PROJECT_DIR$/imcp-consumer/imcp-consumer.iml" filepath="$PROJECT_DIR$/imcp-consumer/imcp-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/imcp-eureka/imcp-eureka.iml" filepath="$PROJECT_DIR$/imcp-eureka/imcp-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imcp-eureka-8762/imcp-eureka (1).iml" filepath="$PROJECT_DIR$/imcp-eureka-8762/imcp-eureka (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/imcp-eureka-8763/imcp-eureka (2).iml" filepath="$PROJECT_DIR$/imcp-eureka-8763/imcp-eureka (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/imcp-eureka-8762/imcp-eureka-8762.iml" filepath="$PROJECT_DIR$/imcp-eureka-8762/imcp-eureka-8762.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imcp-eureka-8763/imcp-eureka-8763.iml" filepath="$PROJECT_DIR$/imcp-eureka-8763/imcp-eureka-8763.iml" />
       <module fileurl="file://$PROJECT_DIR$/imcp-geteway/imcp-geteway.iml" filepath="$PROJECT_DIR$/imcp-geteway/imcp-geteway.iml" />
       <module fileurl="file://$PROJECT_DIR$/imcp-objects/imcp-objects.iml" filepath="$PROJECT_DIR$/imcp-objects/imcp-objects.iml" />
       <module fileurl="file://$PROJECT_DIR$/imcp-output/imcp-output.iml" filepath="$PROJECT_DIR$/imcp-output/imcp-output.iml" />
