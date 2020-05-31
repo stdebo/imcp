@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface OrgMapper extends Mapper<Org> {
     //查询下级组织
-    public List<Org> getChildOrg(String parent);
+    public List<Org> getChildOrg(String parent,String orgName);
 }

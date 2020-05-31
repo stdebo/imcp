@@ -10,8 +10,6 @@ import java.util.List;
 public interface UserRelationService {
     //新增关联关系
     public int addUserRelation(UserRelation userRelation);
-    //修改管理关系
-    public int updateUserRelation(UserRelation userRelation);
     //删除关联关系
     public int delUserRelation(String id);
     //查询列表

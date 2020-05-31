@@ -21,10 +21,6 @@ public class UserRelationServiceImpl implements UserRelationService {
         return userRelationMapper.insert(userRelation);
     }
 
-    @Override
-    public int updateUserRelation(UserRelation userRelation) {
-        return userRelationMapper.updateByPrimaryKey(userRelation);
-    }
 
     @Override
     public int delUserRelation(String id) {

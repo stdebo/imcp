@@ -29,7 +29,7 @@ public class OrgServiceImpl implements OrgService {
     }
 
     @Override
-    public List<Org> getChildOrg(String parent) {
-        return orgMapper.getChildOrg(parent);
+    public List<Org> getChildOrg(String parent,String orgName) {
+        return orgMapper.getChildOrg(parent,orgName);
     }
 }

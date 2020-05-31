@@ -29,8 +29,8 @@ public class DeptServiceImpl implements DeptService {
     }
 
     @Override
-    public List<Dept> getChildDept(String parent) {
-        return deptMapper.getClildDept(parent);
+    public List<Dept> getChildDept(String parent,String deptName) {
+        return deptMapper.getClildDept(parent,deptName);
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.imcp.basic.bean;
 import lombok.Data;
 
 import javax.persistence.Column;
+import javax.persistence.Id;
 
 /**
  * 角色实体类
@@ -10,17 +11,17 @@ import javax.persistence.Column;
 @Data
 public class Role {
     //角色id
-    @Column(name="id")
+    @Id
     private String id;
     //角色guid
     @Column(name="guid")
     private String guid;
     //角色名称
-    @Column(name="rolaName")
-    private String rolaName;
+    @Column(name="roleName")
+    private String roleName;
     //状态
     @Column(name="status")
-    private String status;
+    private Integer status;
     //描述
     @Column(name="remark")
     private String remark;

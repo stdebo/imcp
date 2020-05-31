@@ -12,7 +12,7 @@ public interface DeptService {
     //删除部门
     public int delDept(String id);
     //查询下级部门
-    public List<Dept> getChildDept(String parent);
+    public List<Dept> getChildDept(String parent,String deptName);
     //查询所有部门
     public List<Dept> getAllDept();
 }

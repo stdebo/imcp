@@ -4,6 +4,7 @@ import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Column;
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Date;
 @Data
 public class User {
     //用户id
-    @Column(name="id")
+    @Id
     private String id;
     //用户guid
     @Column(name="guid")

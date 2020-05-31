@@ -12,5 +12,5 @@ public interface OrgService {
     //删除组织
     public int delOrg(String id);
     //查询子级组织列表
-    public List<Org> getChildOrg(String parent);
+    public List<Org> getChildOrg(String parent,String orgName);
 }

@@ -9,10 +9,10 @@ import java.util.List;
 public interface UserMapper extends Mapper<User> {
     /**
      *
-     * @param userName
+     * @param userCode
      * @param passWord
      * @return
      */
-    public User queryUser(String userName,String passWord);
+    public User queryUser(String userCode,String passWord);
 
 }

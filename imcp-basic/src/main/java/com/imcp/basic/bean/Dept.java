@@ -3,6 +3,7 @@ package com.imcp.basic.bean;
 import lombok.Data;
 
 import javax.persistence.Column;
+import javax.persistence.Id;
 
 /**
  * 部门实体类
@@ -10,7 +11,7 @@ import javax.persistence.Column;
 @Data
 public class Dept {
     //部门id
-    @Column(name="id")
+    @Id
     private String id;
     //部门guid
     @Column(name="guid")
@@ -23,7 +24,7 @@ public class Dept {
     private String parent;
     //状态
     @Column(name="status")
-    private String status;
+    private Integer status;
     //部门描述
     @Column(name="remark")
     private String remark;

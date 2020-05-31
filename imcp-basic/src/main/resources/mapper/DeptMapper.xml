@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.imcp.basic.mapper.DeptMapper">
-    <select id="getClildDept" resultType="List" parameterType="String">
+    <select id="getClildDept" parameterType="String" resultType="Dept">
         select id,guid,deptName,parent,status,remark from dept
         where parent = #{parent}
+        <if test="deptName != null and deptName != ''">
+           and deptName like concat('%',#{deptName},'%')
+        </if>
     </select>
 </mapper>

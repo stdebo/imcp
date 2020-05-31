@@ -6,5 +6,5 @@ import tk.mybatis.mapper.common.Mapper;
 import java.util.List;
 
 public interface DeptMapper extends Mapper<Dept> {
-    public List<Dept> getClildDept(String parent);
+    public List<Dept> getClildDept(String parent,String deptName);
 }

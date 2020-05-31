@@ -3,6 +3,7 @@ package com.imcp.basic.bean;
 import lombok.Data;
 
 import javax.persistence.Column;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
@@ -12,7 +13,7 @@ import javax.persistence.Table;
 @Table(name ="User_Relation")
 public class UserRelation {
     //id
-    @Column(name ="id")
+    @Id
     private String id;
     //用户id
     @Column(name ="userGuid")

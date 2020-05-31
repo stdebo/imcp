@@ -4,7 +4,7 @@
     <select id="queryUser" resultType="User">
         select id,guid,userCode,userName,sex,email,
         userBirth,idCard,mobileno,address,createDate,status,remark from user
-        where userName = #{userName} and passWord = #{passWord} and status = 0
+        where userCode = #{userCode} and passWord = #{passWord} and status = 0
     </select>
 
 </mapper>
