@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imcp.basic.mapper.UserRelationMapper">
+    <select id="getRoleUser" parameterType="UserRelation" resultType="User">
+        select u.id,u.guid,u.userCode,u.userName,u.sex,u.email,
+        u.userBirth,u.idCard,u.mobileno,u.address,u.createDate,u.status,u.remark from user u
+        inner join user_relation ur on ur.userGuid = u.guid
+        <where>
+            <if test="userGuid != null and userGuid != ''">
+                 and userGuid = #{userGuid}
+            </if>
+            <if test="roleGuid != null and roleGuid != ''">
+                and roleGuid = #{roleGuid}
+            </if>
+            <if test="deptGuid != null and deptGuid != ''">
+                and deptGuid = #{deptGuid}
+            </if>
+            <if test="orgGuid != null and orgGuid != ''">
+                and orgGuid = #{orgGuid}
+            </if>
+        </where>
+        order by u.createDate desc
+    </select>
+
+    <select id="getOrgDept" parameterType="String" resultType="Dept">
+        select p.id,p.guid,p.deptName,p.parent,p.status,p.remark from dept p
+        inner join user_relation ur on ur.deptGuid = p.guid where ur.orgGuid = #{orgGuid}
+    </select>
+
+</mapper>

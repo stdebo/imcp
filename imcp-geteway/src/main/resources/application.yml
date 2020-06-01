@@ -1,0 +1,35 @@
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://imcp-eureka-8761.com:8761/eureka,http://imcp-eureka-8762.com:8762/eureka,http://imcp-eureka-8763.com:8763/eureka
+    instance:
+        instance-id: imcp-geteway-2090.com # 在信息列表时显示主机名称   #host 文件需要配置  127.0.0.1 imcp-geteway-2090.com
+        lease-renewal-interval-in-seconds: 2 # 设置心跳的时间间隔（默认是30秒）
+        lease-expiration-duration-in-seconds: 5 # 如果现在超过了5秒的间隔（默认是90秒）
+        prefer-ip-address: true     # 访问的路径变为IP地址
+zuul:
+  AuthorizedRequestFilter:
+    pre:
+      disable: false
+  prefix: /imcp-proxy #代理前缀 所有的服务访问 都必须加入前缀 例如： http://imcp-geteway-2090.com:2090/imcp-proxy/basic-proxy/consumer/getUser/2
+  ignored-services:
+    "*"
+  routes:
+    imcp-consumer: /basic-proxy/**
+    imcp-objects: /objects-proxy/**
+logging:
+    config: classpath:logback-spring.xml
+server:
+    port: 2090
+spring:
+    application:
+        name: IMCP-GETEWAY
+#    security:
+#      basic:
+#        enabled: true # 启用SpringSecurity的安全配置项
+#      user:
+#        name: imcp  # 认证用户名
+#        password: 123456 # 认证密码
+#        role:        # 授权角色
+#        - USER
+
