@@ -10,8 +10,6 @@
       <module fileurl="file://$PROJECT_DIR$/imcp-bcms/imcp-bcms.iml" filepath="$PROJECT_DIR$/imcp-bcms/imcp-bcms.iml" />
       <module fileurl="file://$PROJECT_DIR$/imcp-consumer/imcp-consumer.iml" filepath="$PROJECT_DIR$/imcp-consumer/imcp-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/imcp-eureka/imcp-eureka.iml" filepath="$PROJECT_DIR$/imcp-eureka/imcp-eureka.iml" />
-      <module fileurl="file://$PROJECT_DIR$/imcp-eureka-8762/imcp-eureka (1).iml" filepath="$PROJECT_DIR$/imcp-eureka-8762/imcp-eureka (1).iml" />
-      <module fileurl="file://$PROJECT_DIR$/imcp-eureka-8763/imcp-eureka (2).iml" filepath="$PROJECT_DIR$/imcp-eureka-8763/imcp-eureka (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/imcp-eureka-8762/imcp-eureka-8762.iml" filepath="$PROJECT_DIR$/imcp-eureka-8762/imcp-eureka-8762.iml" />
       <module fileurl="file://$PROJECT_DIR$/imcp-eureka-8763/imcp-eureka-8763.iml" filepath="$PROJECT_DIR$/imcp-eureka-8763/imcp-eureka-8763.iml" />
       <module fileurl="file://$PROJECT_DIR$/imcp-geteway/imcp-geteway.iml" filepath="$PROJECT_DIR$/imcp-geteway/imcp-geteway.iml" />

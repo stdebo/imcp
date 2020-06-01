@@ -16,7 +16,7 @@ public class Org {
     //上级组织id
     private String parent;
     //状态
-    private String status;
+    private Integer status;
     //组织描述
     private String remark;
 }

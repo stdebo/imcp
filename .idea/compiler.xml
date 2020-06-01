@@ -27,7 +27,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="imcp" target="1.8" />
-      <module name="imcp-api" target="1.8" />
+      <module name="imcp-api" target="1.6" />
       <module name="imcp-basic" target="1.8" />
       <module name="imcp-basic-2011" target="1.8" />
       <module name="imcp-basic-2012" target="1.8" />

@@ -16,7 +16,7 @@ public class Dept {
     //上级部门id
     private String parent;
     //状态
-    private String status;
+    private Integer status;
     //部门描述
     private String remark;
 }

@@ -7,14 +7,10 @@ import lombok.Data;
  */
 @Data
 public class Role {
-    //角色id
+
     private String id;
-    //角色guid
     private String guid;
-    //角色名称
-    private String rolaName;
-    //状态
-    private String status;
-    //描述
+    private String roleName;
+    private Integer status;
     private String remark;
 }
