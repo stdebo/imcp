@@ -21,7 +21,7 @@ public class ConsumerFallback implements FallbackProvider {
 
     @Override
     public String getRoute() {
-        return "imcp-provider-consumer";
+        return "imcp-consumer";
         //微服务配了路由的话，就用配置的名称
         //return "customers";
         //如果要为所有路由提供默认回退，可以创建FallbackProvider类型的bean并使getRoute方法返回*或null
