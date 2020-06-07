@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imcp.objects.mapper.ObjBaseMapper">
+<!--    <resultMap id="" type="">-->
+
+<!--    </resultMap>-->
+    <select id="selectAllObj" resultType="com.imcp.objects.bean.ObjBase" >
+        select * from OBJBASE
+        <where>
+            <if test="objViewName != null and objViewName !=''">
+                and objViewName = #{objViewName}
+            </if>
+            <if test="objName != null and objName != ''">
+                and objName = #{objName}
+            </if>
+        </where>
+    </select>
+</mapper>
