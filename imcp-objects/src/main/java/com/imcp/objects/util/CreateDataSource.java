@@ -8,11 +8,7 @@ import java.sql.Statement;
 
 public class CreateDataSource {
 
-    /**
-     * @param args
-     */
     public static void main(String[] args) {
-// TODO Auto-generated method stub
         String database = "test2";
         new CreateDataSource().getConn(database);
     }
@@ -30,7 +26,6 @@ public class CreateDataSource {
         try {
             Class.forName(mysqlDriver);
         } catch (ClassNotFoundException e) {
-// TODO Auto-generated catch block
             e.printStackTrace();
         }
         try {
@@ -59,7 +54,6 @@ public class CreateDataSource {
             }
 
         } catch (SQLException e1) {
-// TODO Auto-generated catch block
             e1.printStackTrace();
         }
         return conn;
