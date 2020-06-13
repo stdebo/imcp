@@ -15,9 +15,9 @@ public class CreateDataSource {
 
     String mysqlDriver = "com.mysql.jdbc.Driver";
     String url = "jdbc:mysql://localhost:3306/imcp_objects";
-    String newUrl = "jdbc:mysql://localhost:3306/";
-    String username = "root";
-    String password = "root";
+    public static String newUrl = "jdbc:mysql://localhost:3306/";
+    public static String username = "root";
+    public static String password = "123456";
     Connection conn = null;
     Connection newConn = null;
 
@@ -56,6 +56,6 @@ public class CreateDataSource {
         } catch (SQLException e1) {
             e1.printStackTrace();
         }
-        return conn;
+        return newConn;
     }
 }

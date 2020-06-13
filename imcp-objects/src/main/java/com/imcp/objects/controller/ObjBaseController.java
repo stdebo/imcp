@@ -25,6 +25,7 @@ public class ObjBaseController {
     public List getAll(){
         return objBaseService.getAll();
     }
+
     @RequestMapping("/selectAll")
     public Object selectAll(@RequestParam Map<String,String> map){
         Integer pageSize = Integer.parseInt(map.get("pageSize"));
