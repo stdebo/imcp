@@ -15,7 +15,8 @@ public class CreateDataSource {
 
     String mysqlDriver = "com.mysql.jdbc.Driver";
     String url = "jdbc:mysql://localhost:3306/imcp_objects";
-    public static String newUrl = "jdbc:mysql://localhost:3306/";
+    //public static String newUrl = "jdbc:mysql://localhost:3306/";
+    public static String newUrl = "jdbc:mysql://localhost:3306/imcp_business";
     public static String username = "root";
     public static String password = "123456";
     Connection conn = null;

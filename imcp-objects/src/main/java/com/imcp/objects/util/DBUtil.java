@@ -9,8 +9,8 @@ public class DBUtil {
 	 * 连接数据库
 	 * @return
 	 */
-	public static Connection getConnnection(String database){
-		String url = CreateDataSource.newUrl+database;
+	public static Connection getConnnection(){
+		String url = CreateDataSource.newUrl;
 		String username = CreateDataSource.username;
 		String password = CreateDataSource.password;
 		try {
