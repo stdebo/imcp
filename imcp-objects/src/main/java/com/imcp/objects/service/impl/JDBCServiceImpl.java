@@ -44,12 +44,12 @@ public class JDBCServiceImpl implements JDBCService {
 
     @Override
     public int deleteOne(String tableName, List<Object> guids) {
-        String sql ="delete from "+tableName+" wgere guid in( ?";
+        String sql ="delete from "+tableName+" where guid in(";
         for(int i = 0;i<guids.size();i++){
             sql += "?,";
         }
         sql = sql.substring(0,sql.length()-1)+")";
-        return jdbcMapper.executeUpdate(sql,guids);
+        return jdbcMapper.executeDelete(sql,guids);
     }
 
     @Override

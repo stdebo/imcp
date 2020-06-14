@@ -50,10 +50,15 @@ public class JDBCController {
 
     //根据guid删除单表
     @RequestMapping("/deleteOne")
-    public int deleteOne(String tableName,List<Object> guids){
+    public int deleteOne(String tableName,@RequestParam String guids){
         if (tableName.isEmpty()){
             return 0;
         }
-        return jdbcService.deleteOne(tableName,guids);
+        String[] list = guids.split(",");
+        List<Object> obj = new ArrayList<Object>();
+        for(int i = 0 ;i<list.length;i++){
+            obj.add(list[i]);
+        }
+        return jdbcService.deleteOne(tableName,obj);
     }
 }
