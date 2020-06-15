@@ -6,15 +6,14 @@ import java.util.Map;
 
 public interface JDBCService {
     //新增单表数据
-    int save(String sql ,List<Object> list);
-    //根据guid修改单表字段
-    int updateOne(Map<String,Object> map, String tableName,String where);
+    int save(Map<String,Object> map, String tableName);
+    //根据guid批量修改单表字段
+    int updateOne(Map<String,Object> map, String tableName,String guids);
 
-    int updateAll();
-    //根据guid删除单表数据
-    int deleteOne(String tableName,List<Object> guids);
+    //根据guid批量删除单表数据
+    int deleteOne(String tableName,String guids);
 
-    ResultSet findById();
+    List<Map<String,Object>> findById(String tableName,String guid);
 
-    ResultSet findAll();
+    List<Map<String,Object>> findAll(String tableName,Map<String,Object> map);
 }

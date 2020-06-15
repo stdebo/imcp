@@ -1,6 +1,7 @@
 package com.imcp.objects.controller;
 
 import com.imcp.objects.service.JDBCService;
+import com.imcp.objects.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,23 +19,13 @@ public class JDBCController {
 
     //新增单表数据
     @RequestMapping("/add")
-    public int add(@RequestParam Map<String, String> map){
+    public int add(@RequestParam Map<String, Object> map){
         if (map.isEmpty()){
             return 0;
         }
-        String tableName = map.get("tableName");
-        String sql ="insert into "+tableName+" (";
-        List<Object> list = new ArrayList<Object>();
-        String value="";
-        map.remove("dataBase");map.remove("tableName");
-        for(Map.Entry<String, String> entry:map.entrySet()){
-            sql +=entry.getKey()+",";
-            list.add(entry.getValue());
-            value +="?,";
-        }
-        value = value.substring(0,value.length()-1);
-        sql =sql.substring(0,sql.length()-1)+") values("+value+")";
-        return jdbcService.save(sql,list);
+        String tableName = (String) map.get("tableName");
+        map.remove("tableName");
+        return jdbcService.save(map,tableName);
     }
 
     //根据guid修改单表
@@ -51,14 +42,28 @@ public class JDBCController {
     //根据guid删除单表
     @RequestMapping("/deleteOne")
     public int deleteOne(String tableName,@RequestParam String guids){
-        if (tableName.isEmpty()){
+        if (StringUtil.isEmpty(tableName) || StringUtil.isEmpty(guids)){
             return 0;
         }
-        String[] list = guids.split(",");
-        List<Object> obj = new ArrayList<Object>();
-        for(int i = 0 ;i<list.length;i++){
-            obj.add(list[i]);
+        return jdbcService.deleteOne(tableName,guids);
+    }
+
+    //根据guid和tableName查询单条数据
+    @RequestMapping("/getAllOne")
+    public Object getAllOne(String tableName, String guid){
+        if (StringUtil.isEmpty(tableName) || StringUtil.isEmpty(guid)){
+            return null;
         }
-        return jdbcService.deleteOne(tableName,obj);
+        return jdbcService.findById(tableName,guid);
+    }
+    //根据where和tableName查询数据
+    @RequestMapping("/getAllList")
+    public Object getAllList(@RequestParam Map<String, Object> map){
+        if (StringUtil.isEmpty((String) map.get("tableName"))){
+            return null;
+        }
+        String tableName = (String) map.get("tableName");
+        map.remove("tableName");
+        return jdbcService.findAll(tableName,map);
     }
 }
