@@ -1,5 +1,6 @@
 package com.imcp.objects.mapper.impl;
 
+import com.imcp.objects.bean.ObjResult;
 import com.imcp.objects.mapper.JDBCMapper;
 import com.imcp.objects.util.DBUtil;
 import org.springframework.stereotype.Service;
@@ -124,5 +125,25 @@ public class JDBCMapperImpl implements JDBCMapper {
         } finally {
             DBUtil.closeDB(connection, preparedStatement, resultSet);
         }
+    }
+
+    @Override
+    public int executeAdds(ObjResult objResult) {
+        return 0;
+    }
+
+    @Override
+    public int executeUpdates(ObjResult objResult) {
+        return 0;
+    }
+
+    @Override
+    public ObjResult getOneAll(ObjResult objResult) {
+        return null;
+    }
+
+    @Override
+    public int deletes(ObjResult objResult) {
+        return 0;
     }
 }

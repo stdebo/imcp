@@ -1,5 +1,6 @@
 package com.imcp.objects.service.impl;
 
+import com.imcp.objects.bean.ObjResult;
 import com.imcp.objects.mapper.JDBCMapper;
 import com.imcp.objects.service.JDBCService;
 import com.imcp.objects.util.IdUtil;
@@ -93,5 +94,25 @@ public class JDBCServiceImpl implements JDBCService {
             list.add(entry.getValue());
         }
         return jdbcMapper.executeQueryAll(sql,list);
+    }
+
+    @Override
+    public int executeAdds(ObjResult objResult) {
+        return 0;
+    }
+
+    @Override
+    public int executeUpdates(ObjResult objResult) {
+        return 0;
+    }
+
+    @Override
+    public ObjResult getOneAll(ObjResult objResult) {
+        return null;
+    }
+
+    @Override
+    public int deletes(ObjResult objResult) {
+        return 0;
     }
 }
